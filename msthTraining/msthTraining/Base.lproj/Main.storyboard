@@ -137,10 +137,6 @@
                                     <action selector="tappedWithSender:" destination="XGj-Mp-GNv" eventType="touchUpInside" id="s87-1r-OGO"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-lT-59G">
-                                <rect key="frame" x="127" y="397" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OMm-Cc-azj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="855.72519083969462" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="gfT-kG-iqP">
             <objects>
-                <viewController id="VYh-Yp-RCw" sceneMemberID="viewController">
+                <viewController id="VYh-Yp-RCw" customClass="ResultViewController" customModule="msthTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i5q-lD-hO9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +168,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="BACK"/>
+                                <connections>
+                                    <segue destination="icw-R3-KWw" kind="unwind" unwindAction="backToTitleWithSender:" id="ang-0K-kys"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100％" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-cM-dXP">
                                 <rect key="frame" x="0.0" y="305" width="393" height="101"/>
@@ -198,8 +197,13 @@
                         <viewLayoutGuide key="safeArea" id="EcF-Zy-6sv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="1LK-du-mwS" id="Hp8-uS-afo"/>
+                        <outlet property="resultLabel" destination="Crw-cM-dXP" id="srk-4c-oDE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhL-Sr-hLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="icw-R3-KWw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1617.5572519083969" y="-18.30985915492958"/>
         </scene>
