@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     var player: AVAudioPlayer!
 
@@ -16,16 +16,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
     @IBAction func buttonTapped(sender: UIButton){
-        let url = URL(fileURLWithPath: Bundle.main.bundlePath).appendingPathComponent("sampli.mp3")
+        let url = URL(fileURLWithPath: Bundle.main.bundlePath).appendingPathComponent("sample.mp3")
         do {
-            player = try AVAudioPlayer(contentsOF: url)
+            player = try AVAudioPlayer(contentsOf: url)
+            player.delegate = self
             player.play()
         }catch {
             print("Failed!")
         }
     }
-
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("Finshed!")
+    }
+    
 }
 
