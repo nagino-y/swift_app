@@ -29,17 +29,32 @@
                                 <rect key="frame" x="0.0" y="490" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="refresh" id="Erx-K1-8Tr"/>
+                                    <barButtonItem systemItem="refresh" id="Erx-K1-8Tr">
+                                        <connections>
+                                            <action selector="reloadTappedWithSender:" destination="BYZ-38-t0r" id="WZf-s1-me1"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5Qt-ih-bfs"/>
-                                    <barButtonItem title="◀︎" id="Kaw-f1-ID4"/>
+                                    <barButtonItem title="◀︎" id="Kaw-f1-ID4">
+                                        <connections>
+                                            <action selector="backTappedWithSender:" destination="BYZ-38-t0r" id="lhu-cd-t6j"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="61c-lp-IQk"/>
-                                    <barButtonItem title="▶︎" id="LdS-6v-6P2"/>
+                                    <barButtonItem title="▶︎" id="LdS-6v-6P2">
+                                        <connections>
+                                            <action selector="forwardTappedWithSender:" destination="BYZ-38-t0r" id="17f-gn-EI2"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="xKc-lA-gVS" id="uep-Gx-Ye3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
