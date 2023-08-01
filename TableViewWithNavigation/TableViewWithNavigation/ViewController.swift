@@ -11,17 +11,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let animals = ["Dog 🐶", "Cat 😺", "Panda 🐼", "Lion 🦁", "Snake 🐍"]
     
-    @IBOulet var animalTableView: UITableView!
+    @IBOutlet var animalTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        animalTableView.detaSource = self
+        animalTableView.dataSource = self
         animalTableView.delegate = self
     }
     
+    override func prepare(for  segue: UIStoryboardSegue, sender: Any?){
+        if let detailVC = segue.destination as? DetailViewController, let indexPath = sender as?
+            IndexPath {
+            detailVC.message = animals[indexPath.row]
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        retrun animals.count
+        return animals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,6 +38,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label?.text = animals[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "MainToDetail", sender: indexPath)
     }
 
 
