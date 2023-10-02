@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B4D934D2ABEB271002C47EB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D934C2ABEB271002C47EB /* MainTabView.swift */; };
+		4B4D93542ACB0DFB002C47EB /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D93532ACB0DFB002C47EB /* ExploreView.swift */; };
+		4B4D93562ACB0E43002C47EB /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D93552ACB0E43002C47EB /* NotificationsView.swift */; };
+		4B4D93582ACB0EA3002C47EB /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D93572ACB0EA3002C47EB /* MessagesView.swift */; };
 		4B95AB6F2A8FA5C9003F325B /* TwitterSwiftUIYoutubeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B95AB6E2A8FA5C9003F325B /* TwitterSwiftUIYoutubeApp.swift */; };
 		4B95AB712A8FA5C9003F325B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B95AB702A8FA5C9003F325B /* ContentView.swift */; };
 		4B95AB732A8FA5D4003F325B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B95AB722A8FA5D4003F325B /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B4D934C2ABEB271002C47EB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		4B4D93532ACB0DFB002C47EB /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		4B4D93552ACB0E43002C47EB /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		4B4D93572ACB0EA3002C47EB /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		4B95AB6B2A8FA5C9003F325B /* TwitterSwiftUIYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSwiftUIYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B95AB6E2A8FA5C9003F325B /* TwitterSwiftUIYoutubeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSwiftUIYoutubeApp.swift; sourceTree = "<group>"; };
 		4B95AB702A8FA5C9003F325B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +44,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B4D934B2ABEA939002C47EB /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D934C2ABEB271002C47EB /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		4B4D934E2ACB0D0D002C47EB /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D93552ACB0E43002C47EB /* NotificationsView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		4B4D93502ACB0D32002C47EB /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D93532ACB0DFB002C47EB /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		4B4D93512ACB0D94002C47EB /* Massages */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D93572ACB0EA3002C47EB /* MessagesView.swift */,
+			);
+			path = Massages;
+			sourceTree = "<group>";
+		};
+		4B4D93522ACB0DD1002C47EB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		4B95AB622A8FA5C8003F325B = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +125,12 @@
 		4B95AB7C2A8FA6FC003F325B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4B4D93522ACB0DD1002C47EB /* Profile */,
 				4B95AB802A8FA817003F325B /* Components */,
+				4B4D93512ACB0D94002C47EB /* Massages */,
+				4B4D93502ACB0D32002C47EB /* Explore */,
+				4B4D934E2ACB0D0D002C47EB /* Notifications */,
+				4B4D934B2ABEA939002C47EB /* MainTab */,
 				4B95AB812A8FA8F6003F325B /* Feed */,
 			);
 			path = Core;
@@ -216,10 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4D93582ACB0EA3002C47EB /* MessagesView.swift in Sources */,
 				4B95AB712A8FA5C9003F325B /* ContentView.swift in Sources */,
 				4B95AB882A92FEFF003F325B /* TweetRowView.swift in Sources */,
 				4B95AB852A8FAB59003F325B /* FeedView.swift in Sources */,
 				4B95AB6F2A8FA5C9003F325B /* TwitterSwiftUIYoutubeApp.swift in Sources */,
+				4B4D93542ACB0DFB002C47EB /* ExploreView.swift in Sources */,
+				4B4D934D2ABEB271002C47EB /* MainTabView.swift in Sources */,
+				4B4D93562ACB0E43002C47EB /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
