@@ -9,10 +9,23 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
             headerView
             
             actionButtons
+            
+            VStack(alignment: .leading, spacing: 4){
+                HStack{
+                    Text("Heath Leger")
+                        .font(.title2).bold()
+                    Image(systemName: "checkmark.seal.fill")
+                        .foregroundColor(Color(.systemBlue))
+                }
+                
+                Text("@joker")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
             
             Spacer()
         }
